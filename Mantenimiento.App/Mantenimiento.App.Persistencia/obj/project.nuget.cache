@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qxmus+6OeDZt/1935mZw2W24oT/gNC9nHsuzIjCbjrc49vRJLP4YLkSsNXhFBcP4TbhcroZ1RHJKmmU72PLm+A==",
+  "success": true,
+  "projectFilePath": "C:\\ProyectoManteninientoTic\\Mantenimiento.App\\Mantenimiento.App.Persistencia\\Mantenimiento.App.Persistencia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nancy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Nancy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
