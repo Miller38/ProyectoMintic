@@ -1,0 +1,9 @@
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\obj\Debug\netstandard2.0\Mantenimiento.App.Dominio.csprojAssemblyReference.cache
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\obj\Debug\netstandard2.0\Mantenimiento.App.Dominio.AssemblyInfoInputs.cache
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\obj\Debug\netstandard2.0\Mantenimiento.App.Dominio.AssemblyInfo.cs
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\obj\Debug\netstandard2.0\Mantenimiento.App.Dominio.csproj.CoreCompileInputs.cache
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\bin\Debug\netstandard2.0\Mantenimiento.App.Dominio.deps.json
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\bin\Debug\netstandard2.0\Mantenimiento.App.Dominio.dll
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\bin\Debug\netstandard2.0\Mantenimiento.App.Dominio.pdb
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\obj\Debug\netstandard2.0\Mantenimiento.App.Dominio.dll
+C:\NuevoProjecto\ProyectoMintic\Mantenimiento.App\Mantenimiento.App.Dominio\obj\Debug\netstandard2.0\Mantenimiento.App.Dominio.pdb

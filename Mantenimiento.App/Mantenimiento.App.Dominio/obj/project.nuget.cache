@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u2t2NOb0sOlV9vERUUM+2qeou+5Qlmp7X02rlFe+osEuMPHBNm/iw5VXKaUeIIkHHuuSkSKIHK1QcAgkmU1jLg==",
+  "dgSpecHash": "BayOJ3a5xkDuaRZNvaletnxH/3vY2uRXyAM65iFCtG0bXBaErvvDHCExSxh7+ovWCc8DyMaiqGuzNN4pmGEpuw==",
   "success": true,
-  "projectFilePath": "C:\\ProyectoManteninientoTic\\Mantenimiento.App\\Mantenimiento.App.Dominio\\Mantenimiento.App.Dominio.csproj",
+  "projectFilePath": "C:\\NuevoProjecto\\ProyectoMintic\\Mantenimiento.App\\Mantenimiento.App.Dominio\\Mantenimiento.App.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nancy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Nancy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
