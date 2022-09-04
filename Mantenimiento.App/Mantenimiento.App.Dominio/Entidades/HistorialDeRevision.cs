@@ -6,7 +6,7 @@ namespace Mantenimiento.App.Dominio
     {
         public  int Id (get; set;)
         
-        
+        public int Fecha {get; set;}
     
     }
 }
