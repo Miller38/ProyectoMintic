@@ -2,7 +2,7 @@ using System;
 
 namespace Mantenimiento.App.Dominio
 {
-    public class Tecnico : Persona
+    public class Tecnico 
     {
         public int Id {get; set;}
 

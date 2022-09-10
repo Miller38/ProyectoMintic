@@ -1,9 +1,8 @@
 using System;
 
-
 namespace Mantenimiento.App.Dominio
 {
-    public class HistorialDeRevision : Servicio
+    public class HistorialDeRevision 
     {        
         public  int Id {get; set;}
                 

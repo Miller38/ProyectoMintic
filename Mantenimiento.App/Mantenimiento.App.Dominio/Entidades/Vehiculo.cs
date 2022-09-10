@@ -1,5 +1,6 @@
 using System;
 
+
 namespace Mantenimiento.App.Dominio
 {
 

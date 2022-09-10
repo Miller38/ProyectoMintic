@@ -1,9 +1,8 @@
 using System;
 
-
 namespace Mantenimiento.App.Dominio
 {
-    public class Auto : Vehiculo
+    public class Auto 
     {        
         public  int Id {get; set;}
 

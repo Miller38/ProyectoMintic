@@ -2,7 +2,7 @@ using System;
 
 namespace Mantenimiento.App.Dominio
 {
-    public class Camioneta : Vehiculo
+    public class Camioneta 
     {        
         public  int Id {get; set;}
     
