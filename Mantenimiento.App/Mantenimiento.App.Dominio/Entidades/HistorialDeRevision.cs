@@ -1,11 +1,12 @@
 using System;
 
+
 namespace Mantenimiento.App.Dominio
 {
-    public class Auto
-    {
-        public  int Id (get; set;)
-        
+    public class HistorialDeRevision : Servicio
+    {        
+        public  int Id {get; set;}
+                
         public int Fecha {get; set;}
     
     }
