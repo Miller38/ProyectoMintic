@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BayOJ3a5xkDuaRZNvaletnxH/3vY2uRXyAM65iFCtG0bXBaErvvDHCExSxh7+ovWCc8DyMaiqGuzNN4pmGEpuw==",
+  "dgSpecHash": "3ryoPGtDzUay6SgWeTUl+We974HrEx4/winuHt/J9IsURl/vUKGl2AHiu1tUm/gl66yXqihJhMYEfIhLSiT5uQ==",
   "success": true,
   "projectFilePath": "C:\\NuevoProjecto\\ProyectoMintic\\Mantenimiento.App\\Mantenimiento.App.Dominio\\Mantenimiento.App.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nancy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Nancy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Nancy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Nancy\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

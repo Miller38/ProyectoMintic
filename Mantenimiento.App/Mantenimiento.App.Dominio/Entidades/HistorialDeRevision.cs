@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Mantenimiento.App.Dominio
 {
@@ -6,7 +7,9 @@ namespace Mantenimiento.App.Dominio
     {        
         public  int Id {get; set;}
                 
-        public int Fecha {get; set;}
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha de creacion")]
+        public DateTime? FechaCreacion { get; set; }
     
     }
 }
