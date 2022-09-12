@@ -2072,6 +2072,9 @@
       "Mantenimiento.App.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/Mantenimiento.App.Dominio.dll": {}
         },
