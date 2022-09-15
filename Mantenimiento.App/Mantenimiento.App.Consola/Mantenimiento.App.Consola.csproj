@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mantenimiento.App.Persistencia\Mantenimiento.App.Persistencia.csproj" />
+    <ProjectReference Include="..\Mantenimiento.App.Dominio\Mantenimiento.App.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

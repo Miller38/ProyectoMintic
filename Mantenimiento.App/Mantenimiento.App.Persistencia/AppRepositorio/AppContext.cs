@@ -28,7 +28,7 @@ namespace Mantenimiento.App.Persistencia
             if(!optionsBuilder.IsConfigured) 
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Mantenimiento.Data");
+                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = MantenimientoApp.Data");
             }
         }
     }

@@ -27,6 +27,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\NuevoProjecto\\ProyectoMintic\\Mantenimiento.App\\Mantenimiento.App.Dominio\\Mantenimiento.App.Dominio.csproj": {
+                "projectPath": "C:\\NuevoProjecto\\ProyectoMintic\\Mantenimiento.App\\Mantenimiento.App.Dominio\\Mantenimiento.App.Dominio.csproj"
+              },
               "C:\\NuevoProjecto\\ProyectoMintic\\Mantenimiento.App\\Mantenimiento.App.Persistencia\\Mantenimiento.App.Persistencia.csproj": {
                 "projectPath": "C:\\NuevoProjecto\\ProyectoMintic\\Mantenimiento.App\\Mantenimiento.App.Persistencia\\Mantenimiento.App.Persistencia.csproj"
               }
