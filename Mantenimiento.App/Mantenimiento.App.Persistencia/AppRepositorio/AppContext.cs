@@ -6,6 +6,9 @@ namespace Mantenimiento.App.Persistencia
 {
     public class AppContext : DbContext
     {
+        private const string connectionString = "Server=DESKTOP-BKG5BK7;Database=ContactosApp;trusted_Connection=True;MultipleActiveResultSets=true";
+
+
         public DbSet<Auto> Autos {get; set;}
 
         public DbSet<Camioneta> Camionetas {get; set;}
@@ -22,14 +25,18 @@ namespace Mantenimiento.App.Persistencia
         
         public DbSet<HistorialDeRevision> HistorialDeRevision {get; set;}
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+        public AppContext(){}
 
-        {
-            if(!optionsBuilder.IsConfigured) 
-            {
-                optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = MantenimientoApp.Data");
-            }
-        }
+        public AppContext(DbContextOptions<AppContext> options)
+        :base(options)
+    {
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer(connectionString);
+    }
+
+
     }
 }
