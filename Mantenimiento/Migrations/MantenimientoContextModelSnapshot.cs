@@ -68,7 +68,7 @@ namespace Mantenimiento.Migrations
                     b.Property<int>("TecnicoID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VehiculoID")
+                    b.Property<int>("VehiculoID")
                         .HasColumnType("int");
 
                     b.HasKey("ServicioID");
@@ -156,7 +156,8 @@ namespace Mantenimiento.Migrations
                     b.HasOne("Mantenimiento.Dominio.Vehiculo", "Vehiculo")
                         .WithMany("Servicios")
                         .HasForeignKey("VehiculoID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Tecnico");
 

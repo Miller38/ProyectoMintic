@@ -6,12 +6,13 @@
 }
 
 
+<div class="container" style="width: 50%;">
 <h2 class="text-info">Editar Cliente</h2>
 
 <br>
-<div class="shadow-lg p-3 mb-2 bg-body rounded">
+<div class="shadow-lg p-3 mb-2 bg-body rounded fondo1">
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -42,13 +43,11 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-success">to return</a>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-page="./Index" class="btn btn-success">to return</a>
 </div>
 </div>
 

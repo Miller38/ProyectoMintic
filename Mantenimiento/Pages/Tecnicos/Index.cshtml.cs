@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Mantenimiento.Dominio;
 using Mantenimiento.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mantenimiento.Pages_Tecnicos
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly Mantenimiento.Persistencia.MantenimientoContext _context;

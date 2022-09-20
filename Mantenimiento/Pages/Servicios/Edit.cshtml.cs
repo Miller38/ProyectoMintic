@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mantenimiento.Dominio;
 using Mantenimiento.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mantenimiento.Pages_Servicios
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly Mantenimiento.Persistencia.MantenimientoContext _context;
@@ -32,7 +35,9 @@ namespace Mantenimiento.Pages_Servicios
 
             Servicio = await _context.Servicio
                 .Include(s => s.Tecnico)
-                .Include(s => s.Vehiculo).FirstOrDefaultAsync(m => m.ServicioID == id);
+                .Include(s => s.Vehiculo)
+                .ThenInclude(v => v.Cliente)
+                .FirstOrDefaultAsync(m => m.ServicioID == id);
 
             if (Servicio == null)
             {

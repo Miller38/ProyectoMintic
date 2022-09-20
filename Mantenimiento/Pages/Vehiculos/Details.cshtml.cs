@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Mantenimiento.Dominio;
 using Mantenimiento.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mantenimiento.Pages_Vehiculos
 {
+    [Authorize]
     public class DetailsModel : PageModel
     {
         private readonly Mantenimiento.Persistencia.MantenimientoContext _context;
@@ -29,7 +32,7 @@ namespace Mantenimiento.Pages_Vehiculos
             }
 
             Vehiculo = await _context.Vehiculo
-                .Include(v => v.Cliente)
+                .Include(v => v.Servicios)
                 .FirstOrDefaultAsync(m => m.VehiculoID == id);
 
             if (Vehiculo == null)

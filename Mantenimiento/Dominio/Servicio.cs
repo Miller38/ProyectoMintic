@@ -27,7 +27,7 @@ namespace Mantenimiento.Dominio
         
         // Un servicio tiene un vehiculo
         [ForeignKey("VehiculoID")]
-        public int? VehiculoID {get; set;}
+        public int VehiculoID {get; set;}
         public virtual Vehiculo Vehiculo {get; set;}
     }
 }

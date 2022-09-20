@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Mantenimiento.Dominio;
 using Mantenimiento.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mantenimiento.Pages_Servicios
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly Mantenimiento.Persistencia.MantenimientoContext _context;

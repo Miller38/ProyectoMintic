@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Mantenimiento.Dominio;
 using Mantenimiento.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mantenimiento.Pages_Vehiculos
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly Mantenimiento.Persistencia.MantenimientoContext _context;

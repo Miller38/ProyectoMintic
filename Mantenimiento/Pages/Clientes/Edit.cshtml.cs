@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mantenimiento.Dominio;
 using Mantenimiento.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mantenimiento.Pages_Clientes
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly Mantenimiento.Persistencia.MantenimientoContext _context;

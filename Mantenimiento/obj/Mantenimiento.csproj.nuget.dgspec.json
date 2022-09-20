@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NuevoProjecto\\Mantenimiento\\Mantenimiento.csproj": {}
+    "C:\\Users\\Nancy\\Desktop\\ProyectoMintic\\Mantenimiento\\Mantenimiento.csproj": {}
   },
   "projects": {
-    "C:\\NuevoProjecto\\Mantenimiento\\Mantenimiento.csproj": {
+    "C:\\Users\\Nancy\\Desktop\\ProyectoMintic\\Mantenimiento\\Mantenimiento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NuevoProjecto\\Mantenimiento\\Mantenimiento.csproj",
+        "projectUniqueName": "C:\\Users\\Nancy\\Desktop\\ProyectoMintic\\Mantenimiento\\Mantenimiento.csproj",
         "projectName": "Mantenimiento",
-        "projectPath": "C:\\NuevoProjecto\\Mantenimiento\\Mantenimiento.csproj",
+        "projectPath": "C:\\Users\\Nancy\\Desktop\\ProyectoMintic\\Mantenimiento\\Mantenimiento.csproj",
         "packagesPath": "C:\\Users\\Nancy\\.nuget\\packages\\",
-        "outputPath": "C:\\NuevoProjecto\\Mantenimiento\\obj\\",
+        "outputPath": "C:\\Users\\Nancy\\Desktop\\ProyectoMintic\\Mantenimiento\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nancy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
               "version": "[5.0.0, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
