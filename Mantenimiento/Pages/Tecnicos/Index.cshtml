@@ -1,0 +1,44 @@
+@page
+@model Mantenimiento.Pages_Tecnicos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-info">Técnicos</h2>
+<br>
+<p>
+<a asp-page="Create" class="btn btn-primary">Crear nuevo Tecnico</a>
+</p>
+<br>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Tecnico[0].Codigo)</th>
+                <th>@Html.DisplayNameFor(model => model.Tecnico[0].Cargo)</th>
+                <th>@Html.DisplayNameFor(model => model.Tecnico[0].Nombre)</th>
+                <th>@Html.DisplayNameFor(model => model.Tecnico[0].Apellidos)</th>
+                <th>@Html.DisplayNameFor(model => model.Tecnico[0].Telefono)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Tecnico)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cargo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                    <td>
+                        <a class="btn btn-success" asp-page="./Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen"></i></a> 
+                        <a class="btn btn-warning" asp-page="./Details" asp-route-id="@item.ID"><i class="fa-solid fa-search"></i></a> 
+                        <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.ID"><i class="fa-solid fa-trash"></i></a>                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

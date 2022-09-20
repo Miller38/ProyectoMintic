@@ -1,0 +1,44 @@
+@page
+@model Mantenimiento.Pages_Servicios.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-info">Lista de servicios</h2>
+
+<br>
+<p>
+    <a asp-page="Create" class="btn btn-primary">Crear nuevo servicio</a>
+</p>
+<br>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Servicio[0].FechaCreacion)</th>
+                <th>@Html.DisplayNameFor(model => model.Servicio[0].Descripcion)</th>
+                <!-- Cliente -->
+                <th>@Html.DisplayNameFor(model => model.Servicio[0].Tecnico)</th>
+                <th>@Html.DisplayNameFor(model => model.Servicio[0].Vehiculo)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Servicio)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.FechaCreacion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                    <!-- Cliente -->
+                    <td>@Html.DisplayFor(modelItem => item.Tecnico.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Vehiculo.Placa)</td>
+                    <td>
+                        <a class="btn btn-success" asp-page="./Edit" asp-route-id="@item.ServicioID"><i class="fa-solid fa-pen"></i>  </a> 
+                        <a class="btn btn-warning" asp-page="./Details" asp-route-id="@item.ServicioID"><i class="fa-solid fa-search"></i></a> 
+                        <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.ServicioID"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

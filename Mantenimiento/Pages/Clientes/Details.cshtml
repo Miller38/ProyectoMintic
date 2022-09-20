@@ -1,0 +1,73 @@
+@page
+@model Mantenimiento.Pages_Clientes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="text-info">Detalles</h2>
+
+
+<div>
+<div class="shadow-lg p-3 mb-2 bg-body rounded">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Telefono)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Vehiculos)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Placa</th>
+                    <th>Tipo</th>
+                    <th>Cilindraje</th>
+                    <th>Color</th>
+                </tr>
+                @foreach (var item in Model.Cliente.Vehiculos)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Placa)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cilindraje)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Color)</td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@Model.Cliente.ID" >Editar</a> 
+    <a asp-page="./Index" class="btn btn-success">to return</a>
+</div>
+</div>

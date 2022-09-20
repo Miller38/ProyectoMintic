@@ -1,0 +1,47 @@
+@page
+@model Mantenimiento.Pages_Vehiculos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-info">Lista de vehiculos</h2>
+<br>
+<p>
+    <br>
+    <a asp-page="Create" class="btn btn-primary">Crear nuevo servicio</a>
+</p>
+<br>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Vehiculo[0].Tipo)</th>
+                <th>@Html.DisplayNameFor(model => model.Vehiculo[0].Combustible)</th>
+                <th>@Html.DisplayNameFor(model => model.Vehiculo[0].Placa)</th>
+                <th>@Html.DisplayNameFor(model => model.Vehiculo[0].Cilindraje)</th>
+                <th>@Html.DisplayNameFor(model => model.Vehiculo[0].Color)</th>
+                <th>@Html.DisplayNameFor(model => model.Vehiculo[0].Cliente)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Vehiculo)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Combustible)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Placa)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cilindraje)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Color)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cliente.NombreCompleto)</td>
+                    <td>
+                        <a class="btn btn-success" asp-page="./Edit" asp-route-id="@item.VehiculoID"><i class="fa-solid fa-pen"></i></a> 
+                        <a class="btn btn-warning" asp-page="./Details" asp-route-id="@item.VehiculoID"><i class="fa-solid fa-search"></i></a> 
+                        <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.VehiculoID"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,62 @@
+@page
+@model Mantenimiento.Pages_Vehiculos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2 class="text-info">Editar Vehiculo</h2>
+<br>
+<hr />
+<div class="shadow-lg p-3 mb-2 bg-body rounded">
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vehiculo.VehiculoID" />
+            <div class="form-group">
+                <label asp-for="Vehiculo.Tipo" class="control-label"></label>
+                <select asp-for="Vehiculo.Tipo" asp-items="Html.GetEnumSelectList<Mantenimiento.Dominio.Tipo>()" class="form-control"></select>
+                <span asp-validation-for="Vehiculo.Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehiculo.Combustible" class="control-label"></label>
+                <select asp-for="Vehiculo.Combustible" asp-items="Html.GetEnumSelectList<Mantenimiento.Dominio.Combustible>()" class="form-control"></select>
+                <span asp-validation-for="Vehiculo.Combustible" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehiculo.Placa" class="control-label"></label>
+                <input asp-for="Vehiculo.Placa" class="form-control" />
+                <span asp-validation-for="Vehiculo.Placa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehiculo.Cilindraje" class="control-label"></label>
+                <input asp-for="Vehiculo.Cilindraje" class="form-control" />
+                <span asp-validation-for="Vehiculo.Cilindraje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehiculo.Color" class="control-label"></label>
+                <input asp-for="Vehiculo.Color" class="form-control" />
+                <span asp-validation-for="Vehiculo.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehiculo.ClienteID" class="control-label"></label>
+                <select asp-for="Vehiculo.ClienteID" class="form-control" asp-items="ViewBag.ClienteID"></select>
+                <span asp-validation-for="Vehiculo.ClienteID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index" class="btn btn-success">to return</a>
+</div>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

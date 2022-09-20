@@ -1,0 +1,83 @@
+@page
+@model Mantenimiento.Pages_Vehiculos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div>
+    <h2 class="text-info">Borrar Vehiculo</h2>
+<br>
+    <hr />
+    <div class="shadow-lg p-3 mb-2 bg-body rounded">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehiculo.Tipo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vehiculo.Tipo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehiculo.Combustible)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vehiculo.Combustible)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehiculo.Placa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vehiculo.Placa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehiculo.Cilindraje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vehiculo.Cilindraje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehiculo.Color)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vehiculo.Color)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehiculo.Cliente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vehiculo.Cliente.Apellidos)
+        </dd>
+    </dl>
+    
+     <form method="post">
+
+        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" >Delete</a>|
+        <a asp-page="./Index" class="btn btn-success">to return</a>
+
+        <div class="modal fade" id="deleteModal" tabindex="-1"  aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Eliminar</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fa-solid fa-close"></i></button>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <p>¿Estás seguro de eliminar este vehiculo?</p>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="hidden" asp-for="Vehiculo.VehiculoID" />
+                        <input type="submit" value="Delete" class="btn btn-primary" />
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+    </form>
+
+</div>
+</div>

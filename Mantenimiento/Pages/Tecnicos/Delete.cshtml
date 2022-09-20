@@ -1,0 +1,77 @@
+@page
+@model Mantenimiento.Pages_Tecnicos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div>
+    <h2 class="text-info">Borrar Tecnico</h2>
+<br>
+    <hr />
+    <div class="shadow-lg p-3 mb-2 bg-body rounded">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tecnico.Codigo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tecnico.Codigo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tecnico.Cargo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tecnico.Cargo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tecnico.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tecnico.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tecnico.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tecnico.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tecnico.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tecnico.Telefono)
+        </dd>
+    </dl>
+    
+     <form method="post">
+
+        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" >Delete</a>|
+        <a asp-page="./Index" class="btn btn-success">to return</a>
+
+        <div class="modal fade" id="deleteModal" tabindex="-1"  aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Eliminar</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fa-solid fa-close"></i></button>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <p>¿Estás seguro de eliminar esto?</p>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="hidden" asp-for="Tecnico.ID" />
+                        <input type="submit" value="Delete" class="btn btn-primary" />
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+    </form>
+
+</div>
+</div>

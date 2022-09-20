@@ -1,0 +1,78 @@
+@page
+@model Mantenimiento.Pages_Clientes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div>
+    <h2 class="text-info">Cliente</h2>
+
+    <hr />
+    <div class="shadow-lg p-3 mb-2 bg-body rounded">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Telefono)
+        </dd>
+    </dl>
+
+
+    <form method="post">
+
+        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" >Delete</a>|
+        <a asp-page="./Index" class="btn btn-success">to return</a>
+
+        <div class="modal fade" id="deleteModal" tabindex="-1"  aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Eliminar</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <p>¿Estás seguro de eliminar este cliente?</p>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="hidden" asp-for="Cliente.ID" />
+                        <input type="submit" value="Delete" class="btn btn-primary" />
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+    </form>
+
+    </div>
+</div>
+

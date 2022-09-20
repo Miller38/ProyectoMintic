@@ -1,0 +1,57 @@
+@page
+@model Mantenimiento.Pages_Clientes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h2 class="text-info">Editar Cliente</h2>
+
+<br>
+<div class="shadow-lg p-3 mb-2 bg-body rounded">
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cliente.Email" class="control-label"></label>
+                <input asp-for="Cliente.Email" class="form-control" />
+                <span asp-validation-for="Cliente.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Direccion" class="control-label"></label>
+                <input asp-for="Cliente.Direccion" class="form-control" />
+                <span asp-validation-for="Cliente.Direccion" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Cliente.ID" />
+            <div class="form-group">
+                <label asp-for="Cliente.Nombre" class="control-label"></label>
+                <input asp-for="Cliente.Nombre" class="form-control" />
+                <span asp-validation-for="Cliente.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Apellidos" class="control-label"></label>
+                <input asp-for="Cliente.Apellidos" class="form-control" />
+                <span asp-validation-for="Cliente.Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Telefono" class="control-label"></label>
+                <input asp-for="Cliente.Telefono" class="form-control" />
+                <span asp-validation-for="Cliente.Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index" class="btn btn-success">to return</a>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
