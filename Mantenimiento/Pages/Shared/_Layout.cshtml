@@ -5,47 +5,49 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Mantenimiento</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="https://kit.fontawesome.com/81be955960.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css" />    
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">
-                    <img src="~/img/mantenimiento.png" style="height: 45px; width: 45px;"/>
+                    <img src="~/img/mantenimiento.png" style="height: 45px; width: 45px;" />
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Clientes/Index">CLIENTES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Servicios/Index">SERVICIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Tecnicos/Index">TECNICOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Vehiculos/Index">VEHICULOS</a>
-                        </li>
-                        </ul>   
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Clientes/Index">CLIENTES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Servicios/Index">SERVICIOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Tecnicos/Index">TECNICOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Vehiculos/Index">VEHICULOS</a>
+                            </li>
+                        </ul>
                     }
-                    <partial name="_LoginPartial"/>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
@@ -58,11 +60,11 @@
 
     <footer class="border-top footer text-muted bg-secondary">
         <div class="container">
-            &copy; Copyright - 2022 <a asp-area="" asp-page="/Privacy">Designed by Miller</a>           
-            <img src="~/img/github.png" style="height: 45px; width: 45px;"/>
-            <img src="~/img/google-mas.png" style="height: 45px; width: 45px;"/>
-            <img src="~/img/facebook.ico" style="height: 45px; width: 45px;"/>
-            <img src="~/img/whatsapp.png" style="height: 45px; width: 45px;"/>
+            &copy; Copyright - 2022 <a asp-area="" asp-page="/Privacy">Designed by Miller</a>
+            <img src="~/img/github.png" style="height: 45px; width: 45px;" />
+            <img src="~/img/google-mas.png" style="height: 45px; width: 45px;" />
+            <img src="~/img/facebook.ico" style="height: 45px; width: 45px;" />
+            <img src="~/img/whatsapp.png" style="height: 45px; width: 45px;" />
         </div>
     </footer>
 
@@ -72,4 +74,5 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

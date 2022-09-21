@@ -2,7 +2,7 @@
 @model Mantenimiento.Pages_Servicios.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear";
 }
 
 <div class="container" style="width: 50%;">
@@ -26,10 +26,6 @@
             </div>
             <!-- Cliente -->
             <div class="form-group">
-            <label class="control-label">Cliente</label>
-                <select class ="form-control" asp-items="ViewBag.ClienteID"></select>
-            </div>
-            <div class="form-group">
                 <label asp-for="Servicio.Vehiculo" class="control-label"></label>
                 <select asp-for="Servicio.Vehiculo" class ="form-control" asp-items="ViewBag.VehiculoID"></select>
             </div>
@@ -38,14 +34,11 @@
                 <select asp-for="Servicio.TecnicoID" class ="form-control" asp-items="ViewBag.TecnicoID"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-success">Regresar</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="Index" class="btn btn-success">to return</a>
 </div>
 </div>
 </div>

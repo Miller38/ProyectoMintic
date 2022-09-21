@@ -33,9 +33,6 @@ namespace Mantenimiento.Pages_Servicios
         [BindProperty]
         public Servicio Servicio { get; set; }
 
-        [BindProperty]
-        public Cliente Cliente {get; set;}
-
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
