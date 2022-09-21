@@ -5,51 +5,55 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2 class="text-info">Editar Tecnico</h2>
-<br>
-<div class="shadow-lg p-3 mb-2 bg-body rounded fondo1">
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Tecnico.Codigo" class="control-label"></label>
-                <input asp-for="Tecnico.Codigo" class="form-control" />
-                <span asp-validation-for="Tecnico.Codigo" class="text-danger"></span>
+<div class="container" style="width: 50%;">
+    <h2 class="text-info">Editar Tecnico</h2>
+    <br>
+    <div class="shadow-lg p-3 mb-2 bg-body rounded fondo1">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Tecnico.Codigo" class="control-label"></label>
+                        <input asp-for="Tecnico.Codigo" class="form-control" />
+                        <span asp-validation-for="Tecnico.Codigo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Tecnico.Cargo" class="control-label"></label>
+                        <select asp-for="Tecnico.Cargo"
+                            asp-items="Html.GetEnumSelectList<Mantenimiento.Dominio.Cargo>()"
+                            class="form-control"></select>
+                        <span asp-validation-for="Tecnico.Cargo" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="Tecnico.ID" />
+                    <div class="form-group">
+                        <label asp-for="Tecnico.Nombre" class="control-label"></label>
+                        <input asp-for="Tecnico.Nombre" class="form-control" />
+                        <span asp-validation-for="Tecnico.Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Tecnico.Apellidos" class="control-label"></label>
+                        <input asp-for="Tecnico.Apellidos" class="form-control" />
+                        <span asp-validation-for="Tecnico.Apellidos" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Tecnico.Telefono" class="control-label"></label>
+                        <input asp-for="Tecnico.Telefono" class="form-control" />
+                        <span asp-validation-for="Tecnico.Telefono" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="Tecnico.Cargo" class="control-label"></label>
-                <select asp-for="Tecnico.Cargo" asp-items="Html.GetEnumSelectList<Mantenimiento.Dominio.Cargo>()" class="form-control"></select>
-                <span asp-validation-for="Tecnico.Cargo" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="Tecnico.ID" />
-            <div class="form-group">
-                <label asp-for="Tecnico.Nombre" class="control-label"></label>
-                <input asp-for="Tecnico.Nombre" class="form-control" />
-                <span asp-validation-for="Tecnico.Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tecnico.Apellidos" class="control-label"></label>
-                <input asp-for="Tecnico.Apellidos" class="form-control" />
-                <span asp-validation-for="Tecnico.Apellidos" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tecnico.Telefono" class="control-label"></label>
-                <input asp-for="Tecnico.Telefono" class="form-control" />
-                <span asp-validation-for="Tecnico.Telefono" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
+        <div>
+            <a asp-page="./Index" class="btn btn-success">to return</a>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index" class="btn btn-success">to return</a>
-</div>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -24,6 +24,7 @@ namespace Mantenimiento.Pages_Servicios
 
         public IActionResult OnGet()
         {
+        ViewData["ClienteID"] = new SelectList(_context.Cliente, "ID", "NombreCompleto");
         ViewData["TecnicoID"] = new SelectList(_context.Tecnico, "ID", "NombreCompleto");
         ViewData["VehiculoID"] = new SelectList(_context.Vehiculo, "VehiculoID", "Placa");
             return Page();
@@ -31,6 +32,9 @@ namespace Mantenimiento.Pages_Servicios
 
         [BindProperty]
         public Servicio Servicio { get; set; }
+
+        [BindProperty]
+        public Cliente Cliente {get; set;}
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

@@ -8,8 +8,6 @@
 <div>
     <h2 class="text-info">Detalles</h2>
     <br>
-    
-    <div class="container" style="width: 60%;">
         <div class="shadow-lg p-3 mb-2 bg-body rounded fondo1">
             <dl class="row">
                 <dt class="col-sm-2">
@@ -71,9 +69,8 @@
             </dl>
         </div>
         <div>
-            <a asp-page="./Edit" asp-route-id="@Model.Vehiculo.VehiculoID">Edit</a>
+            <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@Model.Vehiculo.VehiculoID">Edit</a>
             <a asp-page="Index" class="btn btn-success">to return</a>
         </div>
     </div>
-</div>
 </div>

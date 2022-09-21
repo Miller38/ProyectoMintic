@@ -33,6 +33,7 @@ namespace Mantenimiento.Pages_Vehiculos
 
             Vehiculo = await _context.Vehiculo
                 .Include(v => v.Servicios)
+                .ThenInclude(s => s.Tecnico)
                 .FirstOrDefaultAsync(m => m.VehiculoID == id);
 
             if (Vehiculo == null)

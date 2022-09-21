@@ -5,43 +5,42 @@
     ViewData["Title"] = "Details";
 }
 
-<h2 class="text-info">Detalles del servicio</h2>
+<div class="container" style="width: 50%;">
+    <h2 class="text-info">Detalles del servicio</h2>
 
-
-<div>
-    
-    <hr />
-    <div class="shadow-lg p-3 mb-2 bg-body rounded fondo1">
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Servicio.FechaCreacion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Servicio.FechaCreacion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Servicio.Descripcion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Servicio.Descripcion)
-        </dd>
-        <!-- Cliente -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Servicio.Tecnico)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Servicio.Tecnico.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Servicio.Vehiculo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Servicio.Vehiculo.Cilindraje)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Servicio.ServicioID">Edit</a> |
-    <a asp-page="./Index" class="btn btn-success">to return</a>
-</div>
+    <div>
+        <div class="shadow-lg p-3 mb-2 bg-body rounded fondo1">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Servicio.FechaCreacion)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Servicio.FechaCreacion)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Servicio.Descripcion)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Servicio.Descripcion)
+                </dd>
+                <!-- Cliente -->
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Servicio.Tecnico)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Servicio.Tecnico.Apellidos)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Servicio.Vehiculo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Servicio.Vehiculo.Cilindraje)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@Model.Servicio.ServicioID">Edit</a> 
+            <a asp-page="./Index" class="btn btn-success">to return</a>
+        </div>
+    </div>
 </div>
