@@ -43,9 +43,9 @@ namespace Mantenimiento.Pages_Servicios
             {
                 return NotFound();
             }
-           ViewData["ClienteID"] = new SelectList(_context.Cliente, "ID", "Apellidos");
-           ViewData["TecnicoID"] = new SelectList(_context.Tecnico, "ID", "Apellidos");
-           ViewData["VehiculoID"] = new SelectList(_context.Vehiculo, "VehiculoID", "Cilindraje");
+            ViewData["ClienteID"] = new SelectList(_context.Cliente, "ID", "Apellidos");
+            ViewData["TecnicoID"] = new SelectList(_context.Tecnico, "ID", "Apellidos");
+            ViewData["VehiculoID"] = new SelectList(_context.Vehiculo, "VehiculoID", "Cilindraje");
             return Page();
         }
 

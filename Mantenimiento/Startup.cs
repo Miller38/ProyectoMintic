@@ -34,7 +34,7 @@ namespace Mantenimiento
             // Authentication
             services.AddDbContext<IdentityContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("IdentityContext")));
-             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<IdentityContext>();
             
             services.AddRazorPages()

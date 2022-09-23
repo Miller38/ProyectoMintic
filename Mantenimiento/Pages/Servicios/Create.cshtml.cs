@@ -24,7 +24,6 @@ namespace Mantenimiento.Pages_Servicios
 
         public IActionResult OnGet()
         {
-        ViewData["ClienteID"] = new SelectList(_context.Cliente, "ID", "NombreCompleto");
         ViewData["TecnicoID"] = new SelectList(_context.Tecnico, "ID", "NombreCompleto");
         ViewData["VehiculoID"] = new SelectList(_context.Vehiculo, "VehiculoID", "Placa");
             return Page();
